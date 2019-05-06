@@ -3,6 +3,14 @@
   left: 20px;
   cursor: pointer;
 }
+@keyframes visible {
+  0% {opacity:0;}
+  100%{opacity:1;}
+}
+@keyframes hidden {
+  0%{opacity:1;}
+  100%{opacity:0;}
+}
 
 .menu {
   display: none;
@@ -16,8 +24,7 @@
   border-left: none;
   border-bottom: none;
   z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
-  transition:  2s;
-  transition-timing-function: ease-in-out;
+  
 }
 
 
@@ -31,6 +38,5 @@
 
 .menu--open {
   display: block;
-  transition:  2s;
-  transition-timing-function: ease-in-out;
+  animation: visible 1s ease-in-out;
 }
